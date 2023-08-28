@@ -1,0 +1,19 @@
+<PaymentSystems>
+<UPI>
+<History>
+It was introduced in 2016 by the National Payment Corporation of India (NPCI) – an entity created by the Reserve Bank of India (RBI). UPI has helped universalize digital payments in India in a short time. 
+</History>
+<WhatisUPI>
+Unified Payment Interface (UPI) is a mobile-based payment system that enables real-time money transfer from your bank account to an individual, a merchant or an online vendor. 
+</WhatisUPI>
+<Advantages>
+All you need to do is link your mobile phone with your bank account and Aadhar number. UPI has eliminated the need to run to an ATM, write a cheque or log into the website of a bank to transfer or receive money.
+</Advantages>
+<Howitworks>
+To make a payment, the user needs to enter either the Virtual Payment Address or the Account number and IFSC Code or Aadhaar Number of the beneficiary or scan the QR code of the recipient on the UPI App. The user then enters Mobile PIN. The information is transmitted to NPCI, which in turn, sends it to the Issuer Bank for authentication. The Issuer Bank then authenticates the MPIN and debits the Remitter’s bank account and credits the Beneficiary’s bank account. All this happens in real time.
+</Howitworks>
+<Easeofaccess>
+Users can access UPI payment facilities through multiple means - UPI Apps (like BHIM) provided by Payment Service Players (PSP) like commercial banks, Payments Banks and other third-party providers like Amazon Pay. 
+</Easeofaccess>
+</UPI>
+</PaymentSystems>
