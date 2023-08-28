@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="MetroBack" size="0.152929 0.234950" />
+    <ImageTarget name="CreditCard" size="0.147108 0.233627" />
+    <ImageTarget name="Metro" size="0.162718 0.234684" />
+    <ImageTarget name="card" size="0.071966 0.100012" />
+  </Tracking>
+</QCARConfig>
