@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.Video;
 
 public enum CardSelection { None,UPI,RUPAY };
 public class PaymentSelectionCard : MonoBehaviour
@@ -18,13 +18,19 @@ public class PaymentSelectionCard : MonoBehaviour
 
     public PaymentSystems json;
 
+
+    public VideoClip[] clips;
+
+    [HideInInspector]public VideoClip clipToPlay;
+
     private void Awake()
     {
         FetchItems();
         TurnOffPanels();
         AssignEvents();
     }
-    private void Start()
+
+    public void Start()
     {
         json = JSONInterpretor.json;
         PaymentInformationPass();
@@ -40,7 +46,6 @@ public class PaymentSelectionCard : MonoBehaviour
             paymentInformationButton[i].briefScroll = FindChild(panelExpands[i].transform.GetChild(1)).GetComponent<TextMeshProUGUI>();
             paymentInformationButton[i].title = panelExpands[i].transform.Find("Panel").Find("Title").GetComponent<TextMeshProUGUI>();
         }
-        //Debug.LogError(panelExpands[1].transform.Find("Panel").Find("Title").name);
     }
 
     //Recurssively check for the child till the end 
@@ -87,6 +92,7 @@ public class PaymentSelectionCard : MonoBehaviour
                 this.paymentInformationButton[2].information = json.RuPay.Advantages;
                 this.paymentInformationButton[3].information = json.RuPay.Howitworks;
                 this.paymentInformationButton[4].information = json.RuPay.Easeofaccess;
+                clipToPlay = clips[0];
                 break;
             case CardSelection.UPI:
                 this.paymentInformationButton[0].information = json.UPI.History;
@@ -94,6 +100,7 @@ public class PaymentSelectionCard : MonoBehaviour
                 this.paymentInformationButton[2].information = json.UPI.Advantages;
                 this.paymentInformationButton[3].information = json.UPI.Howitworks;
                 this.paymentInformationButton[4].information = json.UPI.Easeofaccess;
+                clipToPlay = clips[1];
                 break;
             default:
                 this.paymentInformationButton[0].information = String.Empty;

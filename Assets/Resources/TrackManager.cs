@@ -42,10 +42,9 @@ public class TrackManager : MonoBehaviour
     private void OnTargetFound2()
     {
         foundCard[1] =  true;
-        circleExpanderSpawn2 = Instantiate(circleExpander, Camera.main.WorldToScreenPoint(rupayTarget.transform.position), panel.transform.rotation);
         PaymentSelectionCard selectionCard = circleExpander.GetComponent<PaymentSelectionCard>();
         selectionCard.cardSelection = CardSelection.RUPAY;
-        Debug.LogError(selectionCard);
+        circleExpanderSpawn2 = Instantiate(circleExpander, Camera.main.WorldToScreenPoint(rupayTarget.transform.position), panel.transform.rotation);
         circleExpanderSpawn2.transform.SetParent(panel, false);
         circleExpanderSpawn2.transform.SetSiblingIndex(1);
         ScreenSwitcher.startRoutine = true;
@@ -63,9 +62,9 @@ public class TrackManager : MonoBehaviour
     {
         foundCard[0] = true;
 
-        circleExpanderSpawn = Instantiate(circleExpander, Camera.main.WorldToScreenPoint(upiTarget.transform.position),panel.transform.rotation);
         PaymentSelectionCard selectionCard = circleExpander.GetComponent<PaymentSelectionCard>();
         selectionCard.cardSelection = CardSelection.UPI;
+        circleExpanderSpawn = Instantiate(circleExpander, Camera.main.WorldToScreenPoint(upiTarget.transform.position),panel.transform.rotation);
         circleExpanderSpawn.transform.SetParent(panel,false);
         circleExpanderSpawn.transform.SetSiblingIndex(1);
         ScreenSwitcher.startRoutine = true;
